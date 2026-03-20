@@ -5,5 +5,10 @@
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
+    <style name="SquareButton" parent="Widget.Material3.Button">
+        <item name="android:background">@drawable/button_square</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
     <style name="Theme.WaverReplica" parent="Base.Theme.WaverReplica" />
 </resources>
