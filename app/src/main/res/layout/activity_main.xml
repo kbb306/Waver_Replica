@@ -60,11 +60,7 @@
         app:layout_constraintStart_toEndOf="@id/file"
         app:layout_constraintTop_toTopOf="@id/file"/>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="409dp"
-        android:layout_height="644dp"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="86dp" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
