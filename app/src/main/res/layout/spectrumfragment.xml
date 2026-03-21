@@ -1,6 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <View
+        android:id="@+id/graph"
+        android:layout_width="375dp"
+        android:layout_height="723dp"
+        android:layout_marginTop="44dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/highbound" />
+
+    <SeekBar
+        android:id="@+id/lowbound"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:max="10"
+        android:progress="3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/fps"
+        app:layout_constraintTop_toTopOf="@id/fps"
+        app:layout_constraintBottom_toBottomOf="@id/fps"
+        tools:layout_editor_absoluteY="56dp" />
+
+    <SeekBar
+        android:id="@+id/highbound"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:max="10"
+        android:progress="3"
+        app:layout_constraintEnd_toStartOf="@+id/rx"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/rx"
+        app:layout_constraintBottom_toBottomOf="@id/rx"
+        tools:layout_editor_absoluteY="87dp" />
+
+    <SeekBar
+        android:id="@+id/unknown"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:max="10"
+        android:progress="3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/rx"
+        app:layout_constraintTop_toTopOf="@id/rx"
+        app:layout_constraintBottom_toBottomOf="@id/rx"
+        tools:layout_editor_absoluteY="104dp" />
+
+    <CheckBox
+        android:id="@+id/fps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:text="FPS"
+        app:layout_constraintEnd_toStartOf="@+id/spectrogram"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteY="24dp" />
+
+    <CheckBox
+        android:id="@+id/spectrogram"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="Spectrogram"
+        app:layout_constraintBottom_toBottomOf="@id/fps"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/fps"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <CheckBox
+        android:id="@+id/rx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rx"
+        app:layout_constraintTop_toBottomOf="@+id/fps"
+        app:layout_constraintStart_toStartOf="@id/fps"
+        tools:layout_editor_absoluteX="211dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
