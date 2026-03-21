@@ -16,6 +16,7 @@
 
     <SeekBar
         android:id="@+id/lowbound"
+        android:thumb="null"
         style="@style/Widget.AppCompat.SeekBar.Discrete"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -26,9 +27,20 @@
         app:layout_constraintTop_toTopOf="@id/fps"
         app:layout_constraintBottom_toBottomOf="@id/fps"
         tools:layout_editor_absoluteY="56dp" />
+    
+    <TextView
+        android:id="@+id/lowboundText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bin: 25, Freq: 1171.88Hz"
+        app:layout_constraintTop_toTopOf="@id/lowbound"
+        app:layout_constraintBottom_toBottomOf="@id/lowbound"
+        app:layout_constraintStart_toStartOf="@id/lowbound"
+        app:layout_constraintEnd_toEndOf="@id/lowbound"/>
 
     <SeekBar
         android:id="@+id/highbound"
+        android:thumb="null"
         style="@style/Widget.AppCompat.SeekBar.Discrete"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -40,8 +52,19 @@
         app:layout_constraintBottom_toBottomOf="@id/rx"
         tools:layout_editor_absoluteY="87dp" />
 
+    <TextView
+        android:id="@+id/highboundText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bin: 127, Freq: 5953.12 Hz"
+        app:layout_constraintStart_toStartOf="@id/highbound"
+        app:layout_constraintEnd_toEndOf="@id/highbound"
+        app:layout_constraintTop_toTopOf="@id/highbound"
+        app:layout_constraintBottom_toBottomOf="@id/highbound"/>
+
     <SeekBar
         android:id="@+id/unknown"
+        android:thumb="null"
         style="@style/Widget.AppCompat.SeekBar.Discrete"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -52,6 +75,16 @@
         app:layout_constraintTop_toTopOf="@id/rx"
         app:layout_constraintBottom_toBottomOf="@id/rx"
         tools:layout_editor_absoluteY="104dp" />
+    
+    <TextView
+        android:id="@+id/unknownText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="30.000"
+        app:layout_constraintStart_toStartOf="@id/unknown"
+        app:layout_constraintEnd_toEndOf="@id/unknown"
+        app:layout_constraintTop_toTopOf="@id/unknown"
+        app:layout_constraintBottom_toBottomOf="@id/unknown"/>
 
     <CheckBox
         android:id="@+id/fps"
