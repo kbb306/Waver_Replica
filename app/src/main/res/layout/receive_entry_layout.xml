@@ -37,14 +37,25 @@
         app:layout_constraintStart_toEndOf="@id/filename"/>
 
     <Button
-        android:id="@+id/view"
+        android:id="@+id/share"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:drawableStart="@drawable/ic_share"
-        android:text="VIEW"
+        android:text="SHARE"
         android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fileheader" />
+
+    <Button
+        android:id="@+id/view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:drawableStart="@drawable/ic_view"
+        android:text="VIEW"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@id/share"
         app:layout_constraintTop_toBottomOf="@id/fileheader" />
 
     <Button
@@ -52,13 +63,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
-        android:drawableStart="@drawable/ic_view"
+        android:drawableStart="@drawable/ic_trash"
         android:text="CLEAR"
-        android:textColor="@color/white"
         app:layout_constraintStart_toEndOf="@id/view"
         app:layout_constraintTop_toBottomOf="@id/fileheader" />
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
