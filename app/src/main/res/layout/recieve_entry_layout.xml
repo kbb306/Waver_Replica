@@ -34,7 +34,4 @@
         app:layout_constraintStart_toEndOf="@id/receive"
         app:layout_constraintTop_toBottomOf="@id/filename"/>
 
-
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
