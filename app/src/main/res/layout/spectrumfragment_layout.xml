@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/black">
 
     <View
         android:id="@+id/graph"
@@ -30,6 +31,7 @@
     
     <TextView
         android:id="@+id/lowboundText"
+        android:textColor="@color/white"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Bin: 25, Freq: 1171.88Hz"
@@ -57,6 +59,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Bin: 127, Freq: 5953.12 Hz"
+        android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="@id/highbound"
         app:layout_constraintEnd_toEndOf="@id/highbound"
         app:layout_constraintTop_toTopOf="@id/highbound"
@@ -80,6 +83,7 @@
         android:id="@+id/unknownText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@color/white"
         android:text="30.000"
         app:layout_constraintStart_toStartOf="@id/unknown"
         app:layout_constraintEnd_toEndOf="@id/unknown"
@@ -92,6 +96,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="20dp"
         android:text="FPS"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toStartOf="@+id/spectrogram"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteY="24dp" />
@@ -102,6 +107,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:text="Spectrogram"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="@id/fps"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/fps"
@@ -112,6 +118,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Rx"
+        android:textColor="@color/white"
         app:layout_constraintTop_toBottomOf="@+id/fps"
         app:layout_constraintStart_toStartOf="@id/fps"
         tools:layout_editor_absoluteX="211dp" />
