@@ -70,4 +70,51 @@
         app:layout_constraintStart_toStartOf="@id/volume"
         app:layout_constraintBottom_toTopOf="@id/volume"/>
 
+    <TextView
+        android:id="@+id/protocol_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tx Protocol:"
+        android:textColor="@color/white"
+        android:layout_marginTop="77dp"
+        app:layout_constraintStart_toStartOf="@id/volume_label"
+        app:layout_constraintTop_toBottomOf="@id/volume_label"/>
+
+    <Spinner
+        android:id="@+id/protocol"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        app:layout_constraintStart_toEndOf="@id/protocol_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/protocol_label"
+        android:backgroundTint="@color/teal"/>
+
+    <TextView
+        android:id="@+id/protocol_tooltip_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="[MT] = mono-tone"
+        app:layout_constraintBottom_toTopOf="@id/protocol"
+        app:layout_constraintStart_toStartOf="@id/protocol"/>
+
+    <TextView
+        android:id="@+id/protocol_tooltip_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="[DT] = dual-tone"
+        app:layout_constraintBottom_toTopOf="@id/protocol_tooltip_1"
+        app:layout_constraintStart_toStartOf="@id/protocol_tooltip_1"/>
+
+    <TextView
+        android:id="@+id/protocol_tooltip_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="[U] = ultrasound"
+        app:layout_constraintBottom_toTopOf="@id/protocol_tooltip_2"
+        app:layout_constraintStart_toStartOf="@id/protocol_tooltip_2"/>
+
+"
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
