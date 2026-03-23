@@ -6,6 +6,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/black">
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/aftercolon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".22"/>
+
+
     <TextView
         android:id="@+id/version"
         android:layout_width="wrap_content"
@@ -57,9 +65,8 @@
         android:id="@+id/volume"
         android:layout_width="304dp"
         android:layout_height="28dp"
-        android:layout_marginStart="48dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/volume_label"
+        app:layout_constraintStart_toEndOf="@id/aftercolon"
         app:layout_constraintTop_toTopOf="@id/volume_label" />
 
     <TextView
@@ -71,7 +78,7 @@
         app:layout_constraintBottom_toTopOf="@id/volume"/>
 
     <TextView
-        android:id="@+id/protocol_label"
+        android:id="@+id/protocollabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Tx Protocol:"
@@ -84,11 +91,11 @@
         android:id="@+id/protocol"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
-        app:layout_constraintStart_toEndOf="@id/protocol_label"
+        android:backgroundTint="@color/teal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/protocol_label"
-        android:backgroundTint="@color/teal"/>
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/aftercolon"
+        app:layout_constraintTop_toTopOf="@id/protocollabel" />
 
     <TextView
         android:id="@+id/protocol_tooltip_1"
@@ -118,22 +125,22 @@
         android:id="@+id/band_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:text="Bandwidth:"
         android:textColor="@color/white"
-        app:layout_constraintTop_toBottomOf="@id/protocol_label"
-        app:layout_constraintStart_toStartOf="@id/protocol_label"/>
+        app:layout_constraintStart_toStartOf="@id/protocollabel"
+        app:layout_constraintTop_toBottomOf="@id/protocollabel" />
 
     <TextView
         android:id="@+id/bandwidth"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
         android:text="33.52 B/s"
         android:textColor="@color/white"
-        app:layout_constraintStart_toEndOf="@id/band_label"
-        app:layout_constraintTop_toTopOf="@id/band_label"/>
+        app:layout_constraintStart_toEndOf="@id/aftercolon"
+        app:layout_constraintTop_toTopOf="@id/band_label" />
 
-<TextView
+    <TextView
     android:id="@+id/freq_label"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -146,40 +153,115 @@
         android:id="@+id/frequencies"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="39dp"
         android:text="1500.00 Hz - 19500 Hz"
         android:textColor="@color/white"
-        app:layout_constraintStart_toEndOf="@id/freq_label"
-        app:layout_constraintTop_toBottomOf="@id/bandwidth"/>
+        app:layout_constraintStart_toEndOf="@id/aftercolon"
+        app:layout_constraintTop_toBottomOf="@id/bandwidth" />
 
     <TextView
         android:id="@+id/fl_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="50dp"
         android:text="Fixed-length:"
         android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="@id/freq_label"
         app:layout_constraintTop_toBottomOf="@id/freq_label"/>
 
-    <CheckBox
+    <com.google.android.material.checkbox.MaterialCheckBox
         android:id="@+id/fixed_length"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toEndOf="@id/fl_label"
+        android:layout_width="24dp"
+        android:layout_height="23dp"
+        app:layout_constraintStart_toEndOf="@id/aftercolon"
         app:layout_constraintTop_toTopOf="@id/fl_label"
         app:layout_constraintBottom_toBottomOf="@id/fl_label"
-        android:layout_marginStart="24dp"/>
+       />
 
     <TextView
         android:id="@+id/fixed_length_tooltip"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Fixed-Length Tx/Rx does not use\n sound-markers"
-        app:layout_constraintStart_toStartOf="@id/fixed_length"
-        app:layout_constraintBottom_toTopOf="@id/fixed_length"/>
+        app:layout_constraintBottom_toTopOf="@id/fixed_length"
+        app:layout_constraintStart_toStartOf="@id/fixed_length" />
 
-    "
+    <TextView
+        android:id="@+id/dss_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Use DSS:"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@id/fl_label"
+        app:layout_constraintTop_toBottomOf="@id/fl_label"/>
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/dss"
+        android:layout_width="24dp"
+        android:layout_height="23dp"
+        app:layout_constraintStart_toEndOf="@id/aftercolon"
+        app:layout_constraintTop_toTopOf="@+id/dss_label"
+        app:layout_constraintBottom_toBottomOf="@id/dss_label"/>
+
+    <TextView
+        android:id="@+id/dss_tooltip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Direct-sequence spread"
+        app:layout_constraintStart_toStartOf="@id/dss"
+        app:layout_constraintBottom_toTopOf="@id/dss"/>
+
+    <TextView
+        android:id="@+id/fshift_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Freq shift:"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@id/dss_label"
+        app:layout_constraintTop_toBottomOf="@id/dss_label"/>
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/fshift"
+        android:layout_width="24dp"
+        android:layout_height="23dp"
+        app:layout_constraintBottom_toBottomOf="@id/fshift_label"
+        app:layout_constraintStart_toEndOf="@id/aftercolon"
+        app:layout_constraintTop_toTopOf="@id/fshift_label" />
+
+
+    <TextView
+        android:id="@+id/fshift_tooltip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Apply tx/rx frequency shift"
+        app:layout_constraintStart_toStartOf="@id/fshift"
+        app:layout_constraintBottom_toTopOf="@id/fshift"/>
+
+    <TextView
+        android:id="@+id/pshift_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Pitch shift:"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@id/fshift_label"
+        app:layout_constraintTop_toBottomOf="@id/fshift_label"/>
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/pshift"
+        android:layout_width="24dp"
+        android:layout_height="23dp"
+        app:layout_constraintStart_toEndOf="@id/aftercolon"
+        app:layout_constraintTop_toTopOf="@id/pshift_label"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="modify the output Sampling Rate"
+        app:layout_constraintStart_toStartOf="@id/pshift"
+        app:layout_constraintBottom_toTopOf="@id/pshift"/>
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
