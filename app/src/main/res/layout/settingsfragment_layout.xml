@@ -261,6 +261,138 @@
         android:text="modify the output Sampling Rate"
         app:layout_constraintStart_toStartOf="@id/pshift"
         app:layout_constraintBottom_toTopOf="@id/pshift"/>
+    
+    <TextView
+        android:id="@+id/listen_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="58dp"
+        android:text="Rx Protocols:"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pshift_label"/>
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/normal"
+        android:layout_width="80dp"
+        android:layout_height="29dp"
+        android:text="Normal"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/listen_list"
+        app:layout_constraintStart_toEndOf="@id/aftercolon"
+        app:layout_constraintTop_toTopOf="@id/listen_list" />
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/fast"
+        android:layout_width="80dp"
+        android:layout_height="29dp"
+        android:text="Fast"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@id/normal"
+        app:layout_constraintTop_toBottomOf="@id/normal"/>
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/fastest"
+        android:layout_width="80dp"
+        android:layout_height="29dp"
+        android:text="Fastest"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@id/fast"
+        app:layout_constraintTop_toBottomOf="@id/fast"/>
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/u_normal"
+        android:layout_width="116dp"
+        android:layout_height="29dp"
+        android:text="[U] Normal"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@id/fastest"
+        app:layout_constraintTop_toBottomOf="@id/fastest" />
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/u_fast"
+        android:layout_width="116dp"
+        android:layout_height="29dp"
+        android:text="[U] Fast"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@id/u_normal"
+        app:layout_constraintTop_toBottomOf="@id/u_normal"/>
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/u_fastest"
+        android:layout_width="116dp"
+        android:layout_height="29dp"
+        android:text="[U] Fastest"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@id/u_fast"
+        app:layout_constraintTop_toBottomOf="@id/u_fast"/>
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/dt_normal"
+        android:layout_width="116dp"
+        android:layout_height="29dp"
+        android:text="[DT] Normal"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@id/u_fastest"
+        app:layout_constraintTop_toBottomOf="@id/u_fastest"/>
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/dt_fast"
+        android:layout_width="116dp"
+        android:layout_height="29dp"
+        android:text="[DT] Fast"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@id/dt_normal"
+        app:layout_constraintTop_toBottomOf="@+id/dt_normal"/>
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/dt_fastest"
+        android:layout_width="116dp"
+        android:layout_height="29dp"
+        android:text="[DT] Fastest"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@id/dt_fast"
+        app:layout_constraintTop_toBottomOf="@id/dt_fast"/>
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/mt_normal"
+        android:layout_width="116dp"
+        android:layout_height="29dp"
+        android:text="[MT] Normal"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@id/dt_fastest"
+        app:layout_constraintTop_toBottomOf="@id/dt_fastest"/>
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/mt_fast"
+        android:layout_width="116dp"
+        android:layout_height="29dp"
+        android:text="[MT] Fast"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@id/mt_normal"
+        app:layout_constraintTop_toBottomOf="@id/mt_normal"/>
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/mt_fastest"
+        android:layout_width="116dp"
+        android:layout_height="29dp"
+        android:text="[MT] Fastest"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@id/mt_fast"
+        app:layout_constraintTop_toBottomOf="@id/mt_fast"/>
+
+    <TextView
+        android:id="@+id/listen_list_tooltip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Waver will recieve only the selected\n protocols"
+        app:layout_constraintStart_toStartOf="@id/normal"
+        app:layout_constraintBottom_toTopOf="@id/normal"/>
+
+
+
+
+
 
 
 
