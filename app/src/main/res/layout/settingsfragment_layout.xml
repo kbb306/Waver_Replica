@@ -169,7 +169,15 @@
         app:layout_constraintStart_toEndOf="@id/fl_label"
         app:layout_constraintTop_toTopOf="@id/fl_label"
         app:layout_constraintBottom_toBottomOf="@id/fl_label"
-        android:layout_marginStart="8dp"/>
+        android:layout_marginStart="24dp"/>
+
+    <TextView
+        android:id="@+id/fixed_length_tooltip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fixed-Length Tx/Rx does not use sound-markers"
+        app:layout_constraintStart_toStartOf="@id/fixed_length"
+        app:layout_constraintBottom_toTopOf="@id/fixed_length"/>
 
     "
 
