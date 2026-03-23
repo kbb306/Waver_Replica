@@ -156,7 +156,7 @@
         android:id="@+id/fl_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="64dp"
         android:text="Fixed-length:"
         android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="@id/freq_label"
@@ -175,7 +175,7 @@
         android:id="@+id/fixed_length_tooltip"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Fixed-Length Tx/Rx does not use sound-markers"
+        android:text="Fixed-Length Tx/Rx does not use\n sound-markers"
         app:layout_constraintStart_toStartOf="@id/fixed_length"
         app:layout_constraintBottom_toTopOf="@id/fixed_length"/>
 
