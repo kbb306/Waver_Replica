@@ -114,7 +114,57 @@
         app:layout_constraintBottom_toTopOf="@id/protocol_tooltip_2"
         app:layout_constraintStart_toStartOf="@id/protocol_tooltip_2"/>
 
-"
+    <TextView
+        android:id="@+id/band_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bandwidth:"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/protocol_label"
+        app:layout_constraintStart_toStartOf="@id/protocol_label"/>
+
+    <TextView
+        android:id="@+id/bandwidth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:text="33.52 B/s"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@id/band_label"
+        app:layout_constraintTop_toTopOf="@id/band_label"/>
+
+<TextView
+    android:id="@+id/freq_label"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Frequencies:"
+    android:textColor="@color/white"
+    app:layout_constraintTop_toBottomOf="@id/band_label"
+    app:layout_constraintStart_toStartOf="@id/band_label"/>
+
+    <TextView
+        android:id="@+id/frequencies"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="39dp"
+        android:text="1500.00 Hz - 19500 Hz"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@id/freq_label"
+        app:layout_constraintTop_toBottomOf="@id/bandwidth"/>
+
+    <TextView
+        android:id="@+id/fl_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="Fixed-length:"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@id/freq_label"
+        app:layout_constraintTop_toBottomOf="@id/freq_label"/>
+
+
+
+    "
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
